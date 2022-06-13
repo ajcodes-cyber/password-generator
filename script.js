@@ -18,17 +18,27 @@ function writePassword() {
   var correctPrompts = getPrompts(); // going to be either true or false
 
   if(correctPrompts) {
-    var password = generatePassword();
+    var newPassword = generatePassword();
     var passwordText = document.querySelector("#password");
 
-    passwordText.value = password;
+    passwordText.value = newPassword;
+
+  } else {
+      passwordText.value = "";
 
   }
 
 }
 
 function generatePassword() {
-// generatePassword will be based on the prompts
+  // generatePassword will be based on the prompts
+  var password = "";
+  for(var i = 0; i < characterlength; i++) {
+    var randomIndex = Math.floor(Math.random() * choiceArray.length); // Random number that is rounded without a decimal
+    password = password + choiceArray[randomIndex];
+
+  }
+  return password; // return this value back to var newPassword
 }
 
 // Prompt asking how long would they like the password to be
