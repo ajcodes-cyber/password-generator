@@ -27,6 +27,7 @@ function generatePassword() {
 // generatePassword will be based on the prompts
 }
 
+// Prompt asking how long would they like the password to be
 function getPrompts() {
   characterLength = prompt("How many characters do you want your password to be? (8 - 128 characters)");
 
@@ -42,4 +43,7 @@ if (confirm("Would you like lowercase letters in your password?")) {
 }
 if (confirm("Would you like uppercase letters in your password?")) {
   choiceArray = choiceArray.concat(upperCaseArray);
+}
+if (confirm("Would you like special characters in your password?")) {
+  choiceArray = choiceArray.concat(specialCharacterArray);
 }
