@@ -2,7 +2,7 @@
 var characterlength = 8;
 var choiceArray = [];
 
-var specialCharacterArray = [];
+var specialCharacterArray = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '[', ']', '{', '}', '|', '?', '/', '<', '>'];
 var lowerCaseArray = [];
 var upperCaseArray = [];
 var numberArray = [];
