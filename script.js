@@ -1,3 +1,4 @@
+// Pseudo Code
 // 1. Prompt the user for password criteria
 //    - Length must be between 8 to 128 characters
 //    - Special, lowercase, uppercase, and number characters
@@ -6,7 +7,7 @@
 // 4. Show the generated password on the page
 
 // Assignment code here
-var characterlength = 8;
+var characterLength = 8;
 var choiceArray = [];
 
 var specialCharacterArray = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '[', ']', '{', '}', '|', '?', '/', '<', '>'];
@@ -40,7 +41,7 @@ function writePassword() {
 function generatePassword() {
   // generatePassword will be based on the prompts presented to user
   var password = "";
-  for(var i = 0; i < characterlength; i++) {
+  for(var i = 0; i < characterLength; i++) {
     var randomIndex = Math.floor(Math.random() * choiceArray.length); // Random number that is rounded without a decimal
     password = password + choiceArray[randomIndex];
 
@@ -54,19 +55,24 @@ function getPrompts() {
 
   characterLength = prompt("How many characters do you want your password to be? (8 - 128 characters)");
 
-  if(isNaN(characterlength) || characterlength < 8 || characterLength > 128) { // This should all be false
+  // This should all be false 
+  if(isNaN(characterLength) || characterLength < 8 || characterLength > 128) { 
     alert("Character length must be a number, 8 to 128 digits. Please attempt again.");
     return false;
   }
-  if (confirm("Would you like lowercase letters in your password?")) { //
+  // lowercase prompt
+  if (confirm("Would you like lowercase letters in your password?")) { 
     choiceArray = choiceArray.concat(lowerCaseArray);
   }
-  if (confirm("Would you like uppercase letters in your password?")) {
+  // uppercase prompt
+  if (confirm("Would you like uppercase letters in your password?")) { 
     choiceArray = choiceArray.concat(upperCaseArray);
   }
+  // special characters prompt
   if (confirm("Would you like special characters in your password?")) {
     choiceArray = choiceArray.concat(specialCharacterArray);
   }
+  // numbers prompt
   if (confirm("Would you like numbers in your password?")) {
     choiceArray = choiceArray.concat(numberArray);
   }
