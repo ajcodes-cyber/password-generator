@@ -1,3 +1,10 @@
+// 1. Prompt the user for password criteria
+//    - Length must be between 8 to 128 characters
+//    - Special, lowercase, uppercase, and number characters
+// 2. Make sure the input is correct with the above criteria
+// 3. Create or generate the password
+// 4. Show the generated password on the page
+
 // Assignment code here
 var characterlength = 8;
 var choiceArray = [];
@@ -31,7 +38,7 @@ function writePassword() {
 }
 
 function generatePassword() {
-  // generatePassword will be based on the prompts
+  // generatePassword will be based on the prompts presented to user
   var password = "";
   for(var i = 0; i < characterlength; i++) {
     var randomIndex = Math.floor(Math.random() * choiceArray.length); // Random number that is rounded without a decimal
@@ -51,7 +58,7 @@ function getPrompts() {
     alert("Character length must be a number, 8 to 128 digits. Please attempt again.");
     return false;
   }
-  if (confirm("Would you like lowercase letters in your password?")) {
+  if (confirm("Would you like lowercase letters in your password?")) { //
     choiceArray = choiceArray.concat(lowerCaseArray);
   }
   if (confirm("Would you like uppercase letters in your password?")) {
