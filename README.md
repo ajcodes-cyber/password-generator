@@ -1,14 +1,16 @@
 # Password Generator Starter Code
 
 ## Description
+The purpose of this project is to create a password generator that adheres to the parameters set by the user story and acceptance criteria with the use of JavaScript.
 
-## User Story
+## Goal
+### User Story
 
 AS AN employee with access to sensitive data
 I WANT to randomly generate a password that meets certain criteria
 SO THAT I can create a strong password that provides greater security
 
-## Acceptance Criteria
+### Acceptance Criteria
 
 GIVEN I need a new, secure password
 WHEN I click the button to generate a password
@@ -25,3 +27,18 @@ WHEN all prompts are answered
 THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
+
+## Installation
+In order to view the interactivity of the password generator, you will need to visit the live deployment URL.
+
+## Usage
+![screenshot of password generator being used](password-generator-finished-app.gif)
+
+## Credits
+I referenced a YouTube video by Daniel Vega https://www.youtube.com/channel/UCnySYlhvBfcJx2NlRuDv-4g
+
+## License
+No license necessary
+
+## Features
+The user is able to choose a random password based on the selection of characters based on their preferences. It features dynamically upadted HTML AND CSS powered by JavaScript.
